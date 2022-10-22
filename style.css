@@ -1,0 +1,124 @@
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+header {
+  width: 50vw;
+  padding: 10px;
+
+  background-color: cornsilk;
+}
+
+.headerList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerListItem {
+  padding: 4px;
+  background-color: rgb(183, 235, 235);
+}
+
+/* ===== Task 1 ===== */
+.commonList {
+  width: 50vw;
+}
+
+.commonListItem:not(:last-child) {
+  margin-bottom: 1vw;
+}
+
+.listFirst,
+.listSecond,
+.listThird,
+.listFourth {
+  display: flex;
+}
+
+.listFirst {
+  justify-content: flex-end;
+}
+
+.listSecond {
+  justify-content: flex-start;
+}
+
+.listThird {
+  justify-content: space-around;
+}
+
+.listFourth {
+  justify-content: space-around;
+}
+
+.listFirst div,
+.listSecond div,
+.listThird div,
+.listFourth div {
+  padding: 3vw;
+
+  background-color: orange;
+  border: 1px solid black;
+}
+
+.listSecond div {
+  background-color: blueviolet;
+}
+
+.listThird div {
+  background-color: darkcyan;
+}
+
+.listFourth div {
+  background-color: cornflowerblue;
+}
+
+.listFirst li,
+.listSecond li {
+  margin: 0 3vw;
+}
+
+.listFourth li {
+  flex-grow: 0.3;
+}
+
+/* ===== Task 2 ===== */
+.listTask2 {
+  width: 50vw;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1vw;
+
+  color: #fff;
+}
+
+.listTask2 div {
+  padding: 6px;
+
+  background-color: gray;
+  border-radius: 6px;
+}
+
+.a {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column-start: span 2;
+}
+
+.g {
+  display: grid;
+  grid-row-start: span 2;
+  grid-column-start: span 2;
+}
+
+.k {
+  grid-column-start: span 3;
+}
+
+@media screen and (min-width: 1024px) {
+  .listTask2 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+}
