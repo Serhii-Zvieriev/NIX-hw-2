@@ -122,3 +122,132 @@ header {
     grid-template-columns: repeat(11, 1fr);
   }
 }
+
+/* ===== Task 3 ===== */
+.listTask3 {
+  width: 50vw;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1vw;
+}
+
+.listTask3 div {
+  padding: 6px;
+
+  background-color: gray;
+  border-radius: 6px;
+}
+
+.task3-A {
+  display: grid;
+  grid-column-start: span 3;
+}
+
+.task3-B {
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 7;
+}
+
+.task3-C {
+  display: grid;
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+.task3-subgrid {
+  display: grid;
+  grid-column-start: span 4;
+  grid-row-start: span 2;
+
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.subgridItem div {
+  background-color: rgb(216, 201, 201);
+}
+
+/* .task3-E { */
+/* grid-column-start: span 2;
+  grid-row-start: span 2; */
+/* } */
+
+/* ===== Task 4 ===== */
+.container {
+  width: 50vw;
+  padding: 10px;
+  border: 1px solid rgb(19, 19, 122);
+}
+
+.blue {
+  height: 100px;
+  margin-bottom: 30px;
+  background-color: rgb(106, 106, 189);
+  border: 3px solid rgb(56, 56, 133);
+}
+
+.green {
+  display: flex;
+  padding: 10px;
+  height: 100px;
+  margin-bottom: 30px;
+  background-color: rgb(67, 170, 72);
+  border: 3px solid rgb(32, 32, 126);
+}
+
+.lightBlue {
+  margin-right: auto;
+  background-color: rgb(100, 155, 236);
+  border: 3px solid rgb(32, 32, 126);
+}
+
+.orange {
+  height: 100%;
+  background-color: rgb(192, 86, 45);
+  border: 3px solid rgb(32, 32, 126);
+}
+
+.red {
+  display: none;
+  background-color: rgb(194, 13, 13);
+  border: 3px solid rgb(32, 32, 126);
+}
+
+.yellow {
+  height: 100px;
+  background-color: rgb(201, 204, 47);
+  border: 3px solid rgb(32, 32, 126);
+}
+
+@media screen and (min-width: 700px) {
+  .miniContainer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .yellow {
+    align-self: end;
+    margin-right: auto;
+    width: 40%;
+    height: 2rem;
+  }
+  .green {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .redAndOrange {
+    display: flex;
+    flex-direction: column;
+  }
+  .orange {
+    height: 20%;
+    margin-bottom: auto;
+  }
+  .red {
+    display: block;
+    height: 20%;
+  }
+}
