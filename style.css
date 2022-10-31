@@ -126,11 +126,17 @@ header {
 /* ===== Task 3 ===== */
 .listTask3 {
   width: 50vw;
+  margin-top: 20px;
+  padding: 10px;
 
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1vw;
+  /* grid-template-columns: 1fr 1fr; */
+  /* grid-template-rows: 1fr 2fr; */
+  gap: 0.5vw;
+
+  background-color: beige;
 }
 
 .listTask3 div {
@@ -141,39 +147,54 @@ header {
 }
 
 .task3-A {
-  display: grid;
-  grid-column-start: span 3;
+  grid-column: span 2;
+  /* grid-column-end: span 3; */
 }
 
 .task3-B {
-  display: grid;
-  grid-column-start: 6;
-  grid-column-end: 7;
+  grid-column-start: 4;
+  grid-column-end: 5;
 }
 
 .task3-C {
-  display: grid;
-  grid-column-start: span 2;
-  grid-row-start: span 2;
+  grid-column: span 1;
+  grid-row: span 2;
 }
 
 .task3-subgrid {
   display: grid;
-  grid-column-start: span 4;
-  grid-row-start: span 2;
-
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
+
+  grid-column-start: 2;
+  grid-column-end: 5;
+
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
-.subgridItem div {
+.task3-subgrid div {
   background-color: rgb(216, 201, 201);
 }
 
-/* .task3-E { */
-/* grid-column-start: span 2;
-  grid-row-start: span 2; */
-/* } */
+.task3-E {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.task3-F {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.task3-G {
+  grid-column: 3 / 4;
+  grid-row: 2/3;
+}
 
 /* ===== Task 4 ===== */
 .container {
